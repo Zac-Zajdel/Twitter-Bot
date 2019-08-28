@@ -2,4 +2,4 @@
 
 - This twitter bot will tweet out Lil Uzi Vert's, "IT'S ONLY MY THIRD DAY OUT, HERE I DON'T KNOW" video on the third day of every month.
 
-- Future Improvements to include: AWS Lambda to automate tweet.
+- I also have this code set up to a AWS EC2 instance so this will be ran on the third day of every month at 3:00pm.

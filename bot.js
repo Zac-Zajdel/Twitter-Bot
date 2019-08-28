@@ -3,11 +3,20 @@ const path = require("path");
 const config = require("./config");
 
 const myTweetObj = {
-  content: "It's only my third day out here, I don't know.",
+  content: "IT'S ONLY MY THIRD DAY OUT HERE, I DON'T KNOW",
   twitter_handle: "ITSONLYMYTHIRD3"
 };
 
-tweetDankMeme(myTweetObj);
+// My EC2 instance is always running so this will make it specifically run once on the third day of every month at 3:00pm.
+let now = new Date();
+if (
+  now.getDate() == 3 &&
+  now.getHours() == 15 &&
+  now.getMinutes() == 0 &&
+  now.getSeconds() == 0
+) {
+  tweetDankMeme(myTweetObj);
+}
 
 function tweetDankMeme(myTweetObj) {
   const T = new Twit(config);
